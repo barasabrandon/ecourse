@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AssignmentsController;
+use App\Http\Controllers\ChatsController;
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DailyIncomeController;
 use App\Http\Controllers\ExpensesController;
@@ -44,6 +45,12 @@ Route::middleware(['auth', 'role:admin|tutor'])->prefix('assignments')->name('as
     Route::get('/create', [AssignmentsController::class, 'create'])->name('create');
     Route::post('/create', [AssignmentsController::class, 'store'])->name('store');
 });
+
+//CHATS
+Route::middleware(['auth', 'role:admin|tutor|student'])->group(function () {
+    Route::get('/chats', [ChatsController::class, 'index'])->name('chats.index');
+});
+
 
 
 

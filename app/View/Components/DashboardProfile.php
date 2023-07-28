@@ -2,8 +2,8 @@
 
 namespace App\View\Components;
 
-use App\Models\Accessories;
-use App\Models\Phones;
+use App\Models\Assignments;
+use App\Models\Courses;
 use Illuminate\View\Component;
 
 class DashboardProfile extends Component
@@ -25,11 +25,11 @@ class DashboardProfile extends Component
      */
     public function render()
     {
-        $phones = Phones::count();
-        $accessories = Accessories::count();
+        $courses = Courses::count();
+        $assignments = Assignments::count();
         return view('components.dashboard-profile')->with([
-            'phones' => $phones,
-            'accessories' => $accessories
+            'courses' => $courses,
+            'assignments' => $assignments
         ]);
     }
 }

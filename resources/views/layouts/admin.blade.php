@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="We sell ecetronic gadgets eg phones. and accessories">
+	<meta name="description" content="Enroll as a student and enjoy all the courses at ecourse">
 	<title>ECOURSE</title>
 
 	<!-- Global stylesheets -->
@@ -155,6 +155,15 @@
 								</span>
 							</a>
 						</li>
+
+						<li class="nav-item">
+							<a href="{{ route('chats.index')}}" class="nav-link">
+								<i class="icon-home4"></i>
+								<span>
+									Let's Talk
+								</span>
+							</a>
+						</li>
 						
 						
 						<li class="nav-item nav-item-submenu">
@@ -241,9 +250,11 @@
 	</div>
 	<!-- /page content -->
 
+	@livewireScripts
 </body>
 
 	<!-- Core JS files -->
+
 	<script src="/limitlesstheme/global_assets/js/main/jquery.min.js"></script>
 	<script src="/limitlesstheme/global_assets/js/main/bootstrap.bundle.min.js"></script>
 	<script src="/limitlesstheme/global_assets/js/plugins/loaders/blockui.min.js"></script>
@@ -264,5 +275,4 @@
     
 	<!-- /theme JS files -->
 	@yield('page-scripts')
-	@livewireScripts
 </html>
